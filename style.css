@@ -150,3 +150,11 @@ footer li{margin-bottom:9px}
 .svc .photo-top{height:190px;overflow:hidden}
 .svc .photo-top img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
 .svc:hover .photo-top img{transform:scale(1.06)}
+
+/* certifications */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:1000px;margin:0 auto}
+.cert{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px rgba(34,52,92,.07);text-align:center}
+.cert img{width:100%;height:172px;object-fit:contain;background:#f5f7fb;padding:12px;border-bottom:1px solid var(--line)}
+.cert .lab{padding:16px 18px}
+.cert .lab b{display:block;font-family:'Barlow Condensed';font-size:20px;color:var(--blue-darker);letter-spacing:.3px;text-transform:uppercase}
+.cert .lab span{font-size:13px;color:var(--muted)}
