@@ -10,7 +10,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#5b8fd6">
+<meta name="theme-color" content="#22345c">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rocco's Roofing, LLC">
 <meta property="og:title" content="About Us | Rocco's Roofing, LLC">
@@ -27,20 +27,22 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="topbar"><div class="wrap">
   <div class="badges"><span>★ Family Owned Since 2005</span><span>★ GAF Certified</span><span>★ Licensed &amp; Insured</span></div>
-  <div>Free Estimates · <a href="tel:6177992976">617-799-2976</a></div>
+  <div>Free Estimates · <a href="tel:+16177992976">617-799-2976</a></div>
 </div></div>
 <header><div class="nav">
-  <a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC logo"><span class="bt"><b>Rocco's Roofing</b><small>Roofing · Siding · Gutters</small></span></a>
-  <nav class="menu" id="menu"><a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="services.html">Services</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
-  <div class="nav-cta"><a class="phone-link" href="tel:6177992976">617-799-2976<span>Call for a free estimate</span></a><a class="btn btn-gold" href="contact.html">Free Estimate</a><button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></div>
+  <a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC logo" width="66" height="58"><span class="bt"><b>Rocco's Roofing</b><small>Roofing · Siding · Gutters</small></span></a>
+  <nav class="menu" id="menu" aria-label="Main"><a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="services.html">Services</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
+  <div class="nav-cta"><a class="phone-link" href="tel:+16177992976">617-799-2976<span>Call for a free estimate</span></a><a class="btn btn-gold" href="contact.html">Free Estimate</a><button class="hamburger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
 </div></header>
 
+<main id="main">
 <section class="page-hero"><div class="wrap"><h1>About Rocco's Roofing</h1><p>A leading, family-owned roofing company serving New England since 2005.</p></div></section>
 
 <section class="pad"><div class="wrap split">
-  <div class="imgcard photo"><img src="images/crew-branded.jpg" alt="The Rocco Roofing crew on a job site in branded gear"></div>
+  <div class="imgcard photo"><picture><source srcset="images/crew-branded.webp" type="image/webp"><img src="images/crew-branded.jpg" alt="The Rocco Roofing crew on a job site in branded gear" width="1050" height="1400" loading="lazy" decoding="async"></picture></div>
   <div>
     <div class="kick">Our Story</div>
     <h2>Roofing is a lifelong craft in our family</h2>
@@ -63,9 +65,9 @@
 <section class="pad"><div class="wrap">
   <div class="sec-head"><div class="kick">Credentials you can trust</div><h2>Our Certifications</h2><p>Rocco's Roofing holds the roofing industry's most respected manufacturer certifications.</p></div>
   <div class="certs">
-    <div class="cert"><img src="images/cert-gaf.jpg" alt="GAF Certified Roofing Contractor - Roccos Roofing LLC" loading="lazy"><div class="lab"><b>GAF Certified</b><span>Certified Roofing Contractor &mdash; top 5% in North America</span></div></div>
-    <div class="cert"><img src="images/cert-shinglemaster.jpg" alt="CertainTeed ShingleMaster Roofing Contractor - Rocco's Roofing" loading="lazy"><div class="lab"><b>CertainTeed ShingleMaster</b><span>Certified roofing contractor</span></div></div>
-    <div class="cert"><img src="images/cert-master-craftsman.jpg" alt="CertainTeed Master Craftsman certificate - Joseph Bianculli" loading="lazy"><div class="lab"><b>Master Craftsman</b><span>Residential Roofing &mdash; Joseph Bianculli</span></div></div>
+    <div class="cert"><picture><source srcset="images/cert-gaf.webp" type="image/webp"><img src="images/cert-gaf.jpg" alt="GAF Certified Roofing Contractor - Roccos Roofing LLC" loading="lazy" width="696" height="264"></picture><div class="lab"><b>GAF Certified</b><span>Certified Roofing Contractor &mdash; top 5% in North America</span></div></div>
+    <div class="cert"><picture><source srcset="images/cert-shinglemaster.webp" type="image/webp"><img src="images/cert-shinglemaster.jpg" alt="CertainTeed ShingleMaster Roofing Contractor - Rocco's Roofing" loading="lazy" width="556" height="264"></picture><div class="lab"><b>CertainTeed ShingleMaster</b><span>Certified roofing contractor</span></div></div>
+    <div class="cert"><picture><source srcset="images/cert-master-craftsman.webp" type="image/webp"><img src="images/cert-master-craftsman.jpg" alt="CertainTeed Master Craftsman certificate - Joseph Bianculli" loading="lazy" width="600" height="256"></picture><div class="lab"><b>Master Craftsman</b><span>Residential Roofing &mdash; Joseph Bianculli</span></div></div>
   </div>
 </div></section>
 
@@ -78,14 +80,18 @@
   <a class="btn btn-blue" href="contact.html">Contact Us</a>
 </div></section>
 
+</main>
+
 <footer><div class="wrap">
   <div class="foot-grid">
-    <div><a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC"></a><p style="max-width:320px;margin-top:14px">Family-owned, GAF-certified roofing serving communities throughout New England since 2005.</p></div>
+    <div><a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC" width="72" height="64" loading="lazy"></a><p style="max-width:320px;margin-top:14px">Family-owned, GAF-certified roofing serving communities throughout New England since 2005.</p></div>
+    <div><h4>Service Area</h4><ul><li>Greater Boston &amp; North Shore</li><li>MetroWest &amp; South Shore</li><li>Rhode Island</li><li>Southern New Hampshire</li><li><a href="service-area.html">See all towns we serve</a></li></ul></div>
     <div><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h4>Get In Touch</h4><ul><li><a href="tel:6177992976">617-799-2976</a></li><li><a href="mailto:joe@roccos-roofing.com">joe@roccos-roofing.com</a></li><li><a href="https://facebook.com/RoccosroofingLLC" target="_blank" rel="noopener">Facebook</a></li><li>Serving All of New England</li></ul></div>
+    <div><h4>Get In Touch</h4><ul><li><a href="tel:+16177992976">617-799-2976</a></li><li><a href="mailto:joe@roccos-roofing.com">joe@roccos-roofing.com</a></li><li><a href="https://facebook.com/RoccosroofingLLC" target="_blank" rel="noopener">Facebook</a></li><!-- TODO(Rocco): paste your Google Business Profile link here so review stars can show in search.
+           <li><a href="https://g.page/YOUR-PROFILE" target="_blank" rel="noopener">Google Reviews</a></li> --></ul></div>
   </div>
   <div class="foot-bottom"><div>© 2026 Rocco's Roofing, LLC. All rights reserved.</div><div>GAF Certified · Licensed &amp; Insured</div></div>
 </div></footer>
-<script>var b=document.getElementById('burger'),m=document.getElementById('menu');if(b){b.addEventListener('click',function(){m.classList.toggle('open');});}</script>
+<script src="site.js" defer></script>
 </body>
 </html>

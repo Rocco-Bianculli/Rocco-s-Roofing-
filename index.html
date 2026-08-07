@@ -10,7 +10,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#5b8fd6">
+<meta name="theme-color" content="#22345c">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rocco's Roofing, LLC">
 <meta property="og:title" content="Rocco's Roofing, LLC | Roofing, Siding &amp; Gutters — New England">
@@ -26,6 +26,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- The hero photo is the largest thing on the page, so tell the browser to start
+     it immediately instead of waiting until the stylesheet has parsed. -->
+<link rel="preload" as="image" href="images/hero.webp" type="image/webp" fetchpriority="high">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,24 +44,46 @@
   "priceRange": "$$",
   "description": "Family-owned, GAF-certified roofing company serving Massachusetts, Rhode Island and Southern New Hampshire since 2005. Roofing, siding, gutters and carpentry.",
   "areaServed": [
+    { "@type": "City", "name": "Boston", "addressRegion": "MA" },
+    { "@type": "City", "name": "Cambridge", "addressRegion": "MA" },
+    { "@type": "City", "name": "Somerville", "addressRegion": "MA" },
+    { "@type": "City", "name": "Medford", "addressRegion": "MA" },
+    { "@type": "City", "name": "Quincy", "addressRegion": "MA" },
+    { "@type": "City", "name": "Newton", "addressRegion": "MA" },
+    { "@type": "City", "name": "Arlington", "addressRegion": "MA" },
+    { "@type": "City", "name": "Woburn", "addressRegion": "MA" },
+    { "@type": "City", "name": "Lynn", "addressRegion": "MA" },
+    { "@type": "City", "name": "Salem", "addressRegion": "MA" },
     { "@type": "State", "name": "Massachusetts" },
     { "@type": "State", "name": "Rhode Island" },
     { "@type": "State", "name": "New Hampshire" }
   ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Roofing & Exterior Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Repair & Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Home Siding" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gutter Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Outdoor Carpentry" } }
+    ]
+  },
   "knowsAbout": ["Roofing", "Roof Repair", "Siding", "Gutters", "Carpentry"],
   "sameAs": ["https://facebook.com/RoccosroofingLLC"]
 }
+
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="topbar"><div class="wrap">
   <div class="badges"><span>★ Family Owned Since 2005</span><span>★ GAF Certified</span><span>★ Licensed &amp; Insured</span></div>
-  <div>Free Estimates · <a href="tel:6177992976">617-799-2976</a></div>
+  <div>Free Estimates · <a href="tel:+16177992976">617-799-2976</a></div>
 </div></div>
 
 <header><div class="nav">
-  <a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC logo"><span class="bt"><b>Rocco's Roofing</b><small>Roofing · Siding · Gutters</small></span></a>
-  <nav class="menu" id="menu">
+  <a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC logo" width="66" height="58"><span class="bt"><b>Rocco's Roofing</b><small>Roofing · Siding · Gutters</small></span></a>
+  <nav class="menu" id="menu" aria-label="Main">
     <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
@@ -66,25 +91,31 @@
     <a href="contact.html">Contact</a>
   </nav>
   <div class="nav-cta">
-    <a class="phone-link" href="tel:6177992976">617-799-2976<span>Call for a free estimate</span></a>
+    <a class="phone-link" href="tel:+16177992976">617-799-2976<span>Call for a free estimate</span></a>
     <a class="btn btn-gold" href="contact.html">Free Estimate</a>
-    <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </div></header>
 
-<section class="hero photo"><div class="wrap">
-  <span class="eyebrow">Serving All of New England</span>
+<main id="main">
+<section class="hero">
+<picture class="hero-bg">
+  <source srcset="images/hero.webp" type="image/webp">
+  <img src="images/hero.jpg" alt="The Rocco's Roofing crew replacing the roof on a New England colonial home" width="1800" height="900" fetchpriority="high" decoding="async">
+</picture>
+<div class="wrap">
+  <span class="eyebrow">Roofing in Greater Boston, MA &amp; Southern NH</span>
   <h1>Roofing done right, by a <em>family</em> that's done it for 20+ years.</h1>
   <p class="lead">Rocco's Roofing is a family-owned, GAF-certified contractor delivering quality roofing, siding, gutters and carpentry — on time and on budget, since 2005.</p>
   <div class="cta-row">
     <a class="btn btn-gold" href="contact.html">Get My Free Estimate</a>
-    <a class="btn btn-ghost" href="tel:6177992976">Call 617-799-2976</a>
+    <a class="btn btn-ghost" href="tel:+16177992976">Call 617-799-2976</a>
   </div>
   <div class="trust">
     <div><b>20+</b><small>Years of experience</small></div>
     <div><b>2005</b><small>Family owned since</small></div>
     <div><b>GAF</b><small>Certified shingler</small></div>
-    
+    <div><b>Free</b><small>No-obligation estimates</small></div>
   </div>
 </div>
 <svg class="roofline" viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="#ffffff" d="M0,70 L720,10 L1440,70 Z"></path></svg>
@@ -111,12 +142,26 @@
   <div style="text-align:center;margin-top:36px"><a class="btn btn-blue" href="services.html">See All Services</a></div>
 </div></section>
 
+<!-- Local SEO: people search "roofer in <their town>", not "roofer in New England".
+     TODO(Rocco): trim this to the towns you actually drive to — an accurate short
+     list beats a long one, and every town here should be somewhere you'd take a job. -->
 <section class="area"><div class="wrap">
-  <h2>Proudly Serving Your Neighborhood</h2><p>Trusted roofing across New England for two decades.</p>
+  <h2>Roofing Contractor Serving Your Town</h2>
+  <p>Two decades of roofs, siding and gutters across Greater Boston, the North Shore, Rhode Island and Southern New Hampshire.</p>
+  <ul class="towns">
+    <li>Boston</li><li>Cambridge</li><li>Somerville</li><li>Medford</li>
+    <li>Malden</li><li>Everett</li><li>Revere</li><li>Winthrop</li>
+    <li>Quincy</li><li>Milton</li><li>Braintree</li><li>Weymouth</li>
+    <li>Newton</li><li>Watertown</li><li>Belmont</li><li>Arlington</li>
+    <li>Lexington</li><li>Winchester</li><li>Woburn</li><li>Stoneham</li>
+    <li>Melrose</li><li>Wakefield</li><li>Reading</li><li>Saugus</li>
+    <li>Lynn</li><li>Peabody</li><li>Salem</li><li>Beverly</li>
+  </ul>
+  <a class="btn btn-gold" href="service-area.html">See every town we serve</a>
 </div></section>
 
 <section class="pad"><div class="wrap split">
-  <div class="imgcard photo"><img src="images/work-colonial-crew.jpg" alt="Rocco's Roofing crew replacing a roof on a colonial home"></div>
+  <div class="imgcard photo"><picture><source srcset="images/work-colonial-crew.webp" type="image/webp"><img src="images/work-colonial-crew.jpg" alt="Rocco's Roofing crew replacing a roof on a colonial home" width="1050" height="1400" loading="lazy" decoding="async"></picture></div>
   <div>
     <div class="kick">Our Commitment</div>
     <h2>A leading, family-owned roofing company</h2>
@@ -130,29 +175,51 @@
 <section class="pad services"><div class="wrap">
   <div class="sec-head"><div class="kick">Our Work</div><h2>Recent Projects</h2><p>A look at real roofs, siding and carpentry we've completed across New England.</p></div>
   <div class="gallery">
-    <a href="images/work-colonial-newroof.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-colonial-newroof.jpg" alt="New roof installation on a large colonial home" loading="lazy"><span class="cap">New roof installation</span></a>
-    <a href="images/work-finished-roof.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-finished-roof.jpg" alt="Completed architectural shingle roof" loading="lazy"><span class="cap">Completed architectural shingle roof</span></a>
-    <a href="images/work-cedar-mansion.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-cedar-mansion.jpg" alt="Cedar shake roof restoration on a large estate" loading="lazy"><span class="cap">Cedar shake roof restoration</span></a>
-    <a href="images/work-ranch-sign.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-ranch-sign.jpg" alt="Finished roof with Rocco's Roofing lawn sign" loading="lazy"><span class="cap">Another happy customer</span></a>
-    <a href="images/crew-branded.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/crew-branded.jpg" alt="Rocco's Roofing crew on the job" loading="lazy"><span class="cap">Our crew on the job</span></a>
-    <a href="images/work-chimney.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-chimney.jpg" alt="Full roof replacement around a brick chimney" loading="lazy"><span class="cap">Full roof replacement</span></a>
-    <a href="images/work-garage-crew.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-garage-crew.jpg" alt="Roof tear-off and replacement in progress" loading="lazy"><span class="cap">Tear-off &amp; replacement</span></a>
-    <a href="images/work-farmhouse.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-farmhouse.jpg" alt="New construction roofing and siding" loading="lazy"><span class="cap">New construction</span></a>
-    <a href="images/work-addition.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-addition.jpg" alt="Home addition framing and siding" loading="lazy"><span class="cap">Home addition &amp; siding</span></a>
-    <a href="images/work-siding-window.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-siding-window.jpg" alt="Custom cedar shake siding around a bay window" loading="lazy"><span class="cap">Custom cedar shake siding</span></a>
-    <a href="images/work-soffit.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-soffit.jpg" alt="Soffit, fascia and gutter carpentry work" loading="lazy"><span class="cap">Soffit, fascia &amp; gutters</span></a>
-    <a href="images/work-colonial-crew.jpg" target="_blank" rel="noopener"><span class="ph"></span><img src="images/work-colonial-crew.jpg" alt="Roof replacement in progress on a colonial" loading="lazy"><span class="cap">Roof replacement in progress</span></a>
+    <a href="images/work-colonial-newroof.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-colonial-newroof.webp" type="image/webp"><img src="images/work-colonial-newroof.jpg" alt="New roof installation on a large colonial home" loading="lazy" width="750" height="1000"></picture><span class="cap">New roof installation</span></a>
+    <a href="images/work-finished-roof.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-finished-roof.webp" type="image/webp"><img src="images/work-finished-roof.jpg" alt="Completed architectural shingle roof" loading="lazy" width="750" height="1000"></picture><span class="cap">Completed architectural shingle roof</span></a>
+    <a href="images/work-cedar-mansion.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-cedar-mansion.webp" type="image/webp"><img src="images/work-cedar-mansion.jpg" alt="Cedar shake roof restoration on a large estate" loading="lazy" width="1000" height="750"></picture><span class="cap">Cedar shake roof restoration</span></a>
+    <a href="images/work-ranch-sign.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-ranch-sign.webp" type="image/webp"><img src="images/work-ranch-sign.jpg" alt="Finished roof with Rocco's Roofing lawn sign" loading="lazy" width="1000" height="750"></picture><span class="cap">Another happy customer</span></a>
+    <a href="images/crew-branded.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/crew-branded.webp" type="image/webp"><img src="images/crew-branded.jpg" alt="Rocco's Roofing crew on the job" loading="lazy" width="1050" height="1400"></picture><span class="cap">Our crew on the job</span></a>
+    <a href="images/work-chimney.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-chimney.webp" type="image/webp"><img src="images/work-chimney.jpg" alt="Full roof replacement around a brick chimney" loading="lazy" width="750" height="1000"></picture><span class="cap">Full roof replacement</span></a>
+    <a href="images/work-garage-crew.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-garage-crew.webp" type="image/webp"><img src="images/work-garage-crew.jpg" alt="Roof tear-off and replacement in progress" loading="lazy" width="750" height="1000"></picture><span class="cap">Tear-off &amp; replacement</span></a>
+    <a href="images/work-farmhouse.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-farmhouse.webp" type="image/webp"><img src="images/work-farmhouse.jpg" alt="New construction roofing and siding" loading="lazy" width="750" height="1000"></picture><span class="cap">New construction</span></a>
+    <a href="images/work-addition.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-addition.webp" type="image/webp"><img src="images/work-addition.jpg" alt="Home addition framing and siding" loading="lazy" width="750" height="1000"></picture><span class="cap">Home addition &amp; siding</span></a>
+    <a href="images/work-siding-window.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-siding-window.webp" type="image/webp"><img src="images/work-siding-window.jpg" alt="Custom cedar shake siding around a bay window" loading="lazy" width="1000" height="750"></picture><span class="cap">Custom cedar shake siding</span></a>
+    <a href="images/work-soffit.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-soffit.webp" type="image/webp"><img src="images/work-soffit.jpg" alt="Soffit, fascia and gutter carpentry work" loading="lazy" width="750" height="1000"></picture><span class="cap">Soffit, fascia &amp; gutters</span></a>
+    <a href="images/work-colonial-crew.jpg" class="lb"><span class="ph"></span><picture><source srcset="images/work-colonial-crew.webp" type="image/webp"><img src="images/work-colonial-crew.jpg" alt="Roof replacement in progress on a colonial" loading="lazy" width="1050" height="1400"></picture><span class="cap">Roof replacement in progress</span></a>
   </div>
 </div></section>
 
 <section class="pad"><div class="wrap">
   <div class="sec-head"><div class="kick">Credentials you can trust</div><h2>Our Certifications</h2><p>Rocco's Roofing holds the roofing industry's most respected manufacturer certifications.</p></div>
   <div class="certs">
-    <div class="cert"><img src="images/cert-gaf.jpg" alt="GAF Certified Roofing Contractor - Roccos Roofing LLC" loading="lazy"><div class="lab"><b>GAF Certified</b><span>Certified Roofing Contractor &mdash; top 5% in North America</span></div></div>
-    <div class="cert"><img src="images/cert-shinglemaster.jpg" alt="CertainTeed ShingleMaster Roofing Contractor - Rocco's Roofing" loading="lazy"><div class="lab"><b>CertainTeed ShingleMaster</b><span>Certified roofing contractor</span></div></div>
-    <div class="cert"><img src="images/cert-master-craftsman.jpg" alt="CertainTeed Master Craftsman certificate - Joseph Bianculli" loading="lazy"><div class="lab"><b>Master Craftsman</b><span>Residential Roofing &mdash; Joseph Bianculli</span></div></div>
+    <div class="cert"><picture><source srcset="images/cert-gaf.webp" type="image/webp"><img src="images/cert-gaf.jpg" alt="GAF Certified Roofing Contractor - Roccos Roofing LLC" loading="lazy" width="696" height="264"></picture><div class="lab"><b>GAF Certified</b><span>Certified Roofing Contractor &mdash; top 5% in North America</span></div></div>
+    <div class="cert"><picture><source srcset="images/cert-shinglemaster.webp" type="image/webp"><img src="images/cert-shinglemaster.jpg" alt="CertainTeed ShingleMaster Roofing Contractor - Rocco's Roofing" loading="lazy" width="556" height="264"></picture><div class="lab"><b>CertainTeed ShingleMaster</b><span>Certified roofing contractor</span></div></div>
+    <div class="cert"><picture><source srcset="images/cert-master-craftsman.webp" type="image/webp"><img src="images/cert-master-craftsman.jpg" alt="CertainTeed Master Craftsman certificate - Joseph Bianculli" loading="lazy" width="600" height="256"></picture><div class="lab"><b>Master Craftsman</b><span>Residential Roofing &mdash; Joseph Bianculli</span></div></div>
   </div>
 </div></section>
+
+<!-- ===========================================================================
+     TESTIMONIALS — the single biggest thing still missing from this site.
+     Homeowners spending $15k on a roof read reviews before they call anyone.
+
+     This is left empty on purpose: real quotes from real customers only. Once
+     Rocco sends you 3, delete this comment block and uncomment the section
+     below, then add the matching "review" + "aggregateRating" to the
+     LocalBusiness JSON-LD at the top of this file so the stars can show up in
+     Google results. Never invent these — fake reviews are illegal (FTC) and
+     Google penalises review markup it can't verify.
+
+<section class="pad"><div class="wrap">
+  <div class="sec-head"><div class="kick">What homeowners say</div><h2>Reviews</h2></div>
+  <div class="quotes">
+    <blockquote class="quote">
+      <p>Their crew tore off and replaced our roof in a single day and you'd never know they were here.</p>
+      <cite>First Last — Town, MA</cite>
+    </blockquote>
+  </div>
+</div></section>
+     =========================================================================== -->
 
 <section class="final"><div class="wrap">
   <h2>Ready for a roof you can count on?</h2>
@@ -160,21 +227,22 @@
   <a class="btn btn-blue" href="contact.html">Request My Free Estimate</a>
 </div></section>
 
+</main>
+
 <footer><div class="wrap">
   <div class="foot-grid">
     <div>
-      <a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC"></a>
+      <a class="brand" href="index.html"><img src="logo.png" alt="Rocco's Roofing, LLC" width="72" height="64" loading="lazy"></a>
       <p style="max-width:320px;margin-top:14px">Family-owned, GAF-certified roofing serving communities throughout New England since 2005.</p>
     </div>
+    <div><h4>Service Area</h4><ul><li>Greater Boston &amp; North Shore</li><li>MetroWest &amp; South Shore</li><li>Rhode Island</li><li>Southern New Hampshire</li><li><a href="service-area.html">See all towns we serve</a></li></ul></div>
     <div><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h4>Get In Touch</h4><ul><li><a href="tel:6177992976">617-799-2976</a></li><li><a href="mailto:joe@roccos-roofing.com">joe@roccos-roofing.com</a></li><li><a href="https://facebook.com/RoccosroofingLLC" target="_blank" rel="noopener">Facebook</a></li><li>Serving All of New England</li></ul></div>
+    <div><h4>Get In Touch</h4><ul><li><a href="tel:+16177992976">617-799-2976</a></li><li><a href="mailto:joe@roccos-roofing.com">joe@roccos-roofing.com</a></li><li><a href="https://facebook.com/RoccosroofingLLC" target="_blank" rel="noopener">Facebook</a></li><!-- TODO(Rocco): paste your Google Business Profile link here so review stars can show in search.
+           <li><a href="https://g.page/YOUR-PROFILE" target="_blank" rel="noopener">Google Reviews</a></li> --></ul></div>
   </div>
   <div class="foot-bottom"><div>© 2026 Rocco's Roofing, LLC. All rights reserved.</div><div>GAF Certified · Licensed &amp; Insured</div></div>
 </div></footer>
 
-<script>
-  var b=document.getElementById('burger'),m=document.getElementById('menu');
-  if(b){b.addEventListener('click',function(){m.classList.toggle('open');});}
-</script>
+<script src="site.js" defer></script>
 </body>
 </html>
